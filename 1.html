@@ -4,14 +4,12 @@
   <head></head>
   
   <body>
-    <script>getLocation();
-      function getLocation() {
+    <script>
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition);
         } else {
           alert("Geolocation is not supported by this browser.");
         }
-      }
       function showPosition(position) {
         alert(position.coords.latitude + "," + position.coords.longitude);
       }</script>
