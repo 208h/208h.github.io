@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body> 
+  <script>
+  getLocation();
+  var x=document.getElementById("demo");
+  function getLocation()
+  {
+  if (navigator.geolocation)
+  {
+  navigator.geolocation.getCurrentPosition(showPosition);
+  }else{x.innerHTML="Geolocation is not supported by this browser.";}}
+function showPosition(position){x.innerHTML=position.coords.latitude+","+position.coords.longitude;}
+</script>  
+ </body>
+</html>
